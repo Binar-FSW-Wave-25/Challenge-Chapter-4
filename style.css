@@ -1,0 +1,327 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #9C835F;
+    height: 1024px;
+}
+
+/* bagian atas */
+.container-satu {
+    display: flex;
+}
+
+.satu {
+    width: 40px;
+    height: 44px;
+    margin-left: 33px;
+    margin-top: 40px;
+    size: 72px;
+}
+
+.satu {
+    font-family: Open Sans;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 98px;
+    text-align: left;
+
+}
+
+.dua {
+    width: 72px;
+    height: 72px;
+    margin-left: 27px;
+    margin-top: 27px;
+}
+
+.tiga {
+    width: 410px;
+    height: 62px;
+    margin-left: 27px;
+    margin-top: 40px;
+    color: #F9B23D;
+}
+
+.tiga {
+    font-family: Open Sans;
+    font-size: 36px;
+    line-height: 49px;
+    letter-spacing: 0px;
+    text-align: center;
+}
+/* bagaian atas selesai */
+
+/* kertas, gunting, batu */
+.team {
+    display: flex;
+    margin-top: 60px;
+}
+
+.p1 {
+    margin-left: 296px;
+}
+
+.computer {
+    
+    margin-left: 270px;
+}
+
+.batu {
+    display: flex;
+}
+
+.batu-satu {
+    margin-left: 380px;
+    margin-top: 11px;
+}
+
+.batu-dua {
+    margin-left: 440px;
+    margin-top: 11px;
+}
+
+.kertas {
+    display: flex;
+}
+
+.kertas-satu {
+    margin-left: 388px;
+    margin-top: 81px;
+}
+
+.versus {
+    margin-left: 86px;
+    margin-top: 60px;
+}
+
+.kertas-dua {
+    margin-left: 85px;
+    margin-top: 81px;
+}
+
+.gunting {
+    display: flex;
+}
+
+.gunting-satu {
+    margin-left: 369px;
+    margin-top: 81px;
+}
+
+.gunting-dua {
+    margin-left: 448px;
+    margin-top: 81px;
+}
+
+
+.kiri {
+    display: flex;  
+    flex-direction: column; 
+    align-items: center;
+}
+
+.kanan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Hover */
+/* .batu-satu:hover {
+    background-color: #C4C4C4;
+}
+
+.kertas-satu:hover {
+    background-color: #C4C4C4;
+}
+
+.gunting-satu:hover {
+    background-color: #C4C4C4;
+} */
+/* Hover Selesai */
+
+.p1 {
+    height: 94px;
+    width: 299px;
+    left: 296px;
+    top: 162px;
+    color: #000000;
+    border-radius: nullpx;
+}
+
+.p1 {
+    font-family: Open Sans;
+    font-size: 36px;
+    font-weight: 700px;
+    line-height: 49px;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+.batu-satu {
+    height: 92px;
+    width: 128px;
+    left: 382px;
+    top: 267px;
+    border-radius: 0px;
+}
+
+.kertas-satu {
+    height: 150px;
+    width: 115px;
+    left: 388px;
+    top: 440px;
+    border-radius: 0px;
+}
+
+.gunting-satu {
+    height: 160px;
+    width: 134px;
+    left: 369px;
+    top: 671px;
+    border-radius: 0px;
+}
+
+.versus {
+    height: 186px;
+    width: 296px;
+    left: 589px;
+    top: 419px;
+    border-radius: nullpx;
+    color: #BD0000;
+}
+
+.versus {
+    font-family: Open Sans;
+    font-size: 144px;
+    font-weight: 700;
+    line-height: 196px;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+.player-one {
+    height: 186px;
+    width: 277px;
+    margin-left: 105px;
+    margin-top: 60px;
+    background: #4C9654;
+    border-radius: 10px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.player-one {
+    font-family: Open Sans;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 80px;
+    letter-spacing: 0.1em;
+    transform: rotate(-28.87deg);
+}
+
+.com-menang {
+    height: 186px;
+    width: 277px;
+    margin-left: 105px;
+    margin-top: 60px;
+    background: #4C9654;
+    border-radius: 10px;
+    color: #FFFFFF;
+    
+}
+
+.com-menang {
+    font-family: Open Sans;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 85px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    transform: rotate(-28.87deg);
+}
+
+.seri {
+    height: 186px;
+    width: 277px;
+    margin-left: 105px;
+    margin-top: 60px;
+    background: #035B0C;
+    border-radius: 10px;
+    color: #FFFFFF;
+}
+
+.seri {
+    font-family: Open Sans;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 185px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    transform: rotate(-28.87deg);
+}
+
+.computer {
+    height: 94px;
+    width: 299px;
+    left: 865px;
+    top: 162px;
+    color: #000000;
+    border-radius: nullpx;
+}
+
+.computer {
+    font-family: Open Sans;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 49px;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+.batu-dua {
+    height: 92px;
+    width: 128px;
+    left: 382px;
+    top: 267px;
+    border-radius: 0px;
+}
+
+.kertas-dua {
+    height: 150px;
+    width: 115px;
+    left: 388px;
+    top: 440px;
+    border-radius: 0px;
+}
+
+.gunting-dua {
+    height: 160px;
+    width: 134px;
+    left: 369px;
+    top: 671px;
+    border-radius: 0px;
+}
+
+.refresh {
+    display: flex;
+    align-items: center;
+}
+
+.refresh {
+    height: 71px;
+    width: 77px;
+    margin-top: 12px;
+    margin-left: 681px;
+}
+
+.hide {
+    display: none;
+}
+/* kertas, gunting, batu selesai*/
+
+
+

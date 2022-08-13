@@ -1,0 +1,174 @@
+body {
+    background-color: #9C835F;;
+}
+
+header {
+    display: flex;
+    margin: 2% 0 0 2%;
+}
+
+.back{
+    display: flex;
+    justify-content: center;
+}
+
+.back a {
+    text-decoration: none;
+}
+
+.back:hover{
+    transform: scale(1.2);
+}
+
+.brand {
+    display: flex;
+    margin-left: 25px;
+}
+
+.brand h1 {
+    margin-left: 25px;
+}
+
+.brand img{
+    max-width: 100%;
+    height: auto;
+}
+
+.area-game{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    text-align: center;
+}
+
+.player-name {
+    font-size: 36px;
+}
+
+.tools img{
+    width: 70%;
+}
+
+button {
+    background-color: Transparent;
+    border-color: transparent;
+    width: 30%;   
+    height: 120px;
+}
+
+
+
+.h1Box {
+    font-size: 144px;
+    color: white;
+    font-weight: bold;
+}
+
+
+.chosen {
+    background-color: #C4C4C4;
+    border-radius: 30px;
+    
+}
+
+.winBox {
+    height: 100px;
+    display: grid;
+    place-items: center;
+    background: #4C9654;
+    border-radius: 10px;
+    margin:  15px auto;
+    padding: 15px;
+    
+}
+
+.drawBox {
+    height: 100px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    margin:  15px auto;
+    padding: 15px;
+    background: #035B0C;
+    border-radius: 10px;
+    
+}
+
+.Versus-Reset {
+    margin-left: 40%;
+    margin-bottom: 35px;
+    align-self: center;
+}
+
+.Versus-Reset h1 {
+    font-size: 44px;
+    color: red;
+    font-weight: bold;
+}
+
+.chosen {
+    background-color: #C4C4C4;
+    border-radius: 30px;
+    
+}
+
+.Box {
+    height: 100px;
+    display: grid;
+    place-items: center;
+    background: #4C9654;
+    border-radius: 10px;
+    margin:  15px auto;
+    padding: 15px;
+    
+}
+
+
+.refresh img {
+    width: 100px;
+    height: auto;
+}
+
+@media(min-width:750px){
+        .area-game{
+        flex-direction: row;
+        transform: translateX(15%);
+        margin-top: 24px; 
+        text-align: center;   
+        }
+
+        .used{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin-left: 24px;
+        }
+        .tools{
+            align-self: center;
+            width: 223px;
+            height: 204px;
+        }
+        .tools img{
+            width: 50%;
+        }
+
+        .Versus-Reset img {
+            width: 50px;
+            transform: translatey(350%)
+    }
+        .Versus-Reset {
+            margin:55px;
+            margin-left: 55px;
+            width: 300px
+            
+    }
+        .Versus-Reset h1{
+            font-size: 144px;
+        }
+        .user-choice{
+            margin: auto 7% 0 0
+        }
+        .Com-Choice{
+            margin: auto 0 0 0;    
+        }
+}        

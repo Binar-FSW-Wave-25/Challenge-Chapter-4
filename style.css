@@ -73,48 +73,19 @@ body {
     display: flex;
 }
 
-.batu-satu {
-    margin-left: 380px;
-    margin-top: 11px;
-}
-
-.batu-dua {
-    margin-left: 440px;
-    margin-top: 11px;
-}
-
 .kertas {
     display: flex;
 }
 
-.kertas-satu {
-    margin-left: 388px;
-    margin-top: 81px;
-}
-
 .versus {
-    margin-left: 86px;
-    margin-top: 60px;
-}
-
-.kertas-dua {
-    margin-left: 85px;
-    margin-top: 81px;
+    margin-left: 40px;
+    margin-top: 80px;
 }
 
 .gunting {
     display: flex;
 }
 
-.gunting-satu {
-    margin-left: 369px;
-    margin-top: 81px;
-}
-
-.gunting-dua {
-    margin-left: 448px;
-    margin-top: 81px;
-}
 
 
 .kiri {
@@ -161,37 +132,121 @@ body {
     text-align: center;
 }
 
+.wrapper-batu-satu {
+    position: relative;
+    width: 223px;
+    height: 204px;
+    background: #C4C4C4;
+    border-radius: 30px;
+    margin-left: 330px;
+    margin-top: 11px;
+
+}
+
 .batu-satu {
+    position: absolute;
     height: 92px;
     width: 128px;
-    left: 382px;
-    top: 267px;
+    left: 45px;
+    top: 55px;
     border-radius: 0px;
+}
+
+.wrapper-kertas-satu {
+    position: relative;
+    width: 223px;
+    height: 204px;
+    background: #C4C4C4;
+    border-radius: 30px;
+    margin-left: 330px;
+    margin-top: 81px;
 }
 
 .kertas-satu {
+    position: absolute;
     height: 150px;
     width: 115px;
-    left: 388px;
-    top: 440px;
+    left: 57px;
+    top: 23px;
     border-radius: 0px;
+}
+
+.wrapper-gunting-satu {
+    position: relative;
+    width: 223px;
+    height: 204px;
+    background: #C4C4C4;
+    border-radius: 30px;
+    margin-left: 330px;
+    margin-top: 81px;
 }
 
 .gunting-satu {
-    height: 160px;
+    position: absolute;
+    top: 20px;
+    left: 43px;
+    height: 168px;
     width: 134px;
-    left: 369px;
-    top: 671px;
     border-radius: 0px;
 }
 
-.background {
+.wrapper-batu-dua {
+    position: relative;
     width: 223px;
     height: 204px;
-    left: 334px;
-    top: 671px;
     background: #C4C4C4;
     border-radius: 30px;
+    margin-left: 355px;
+    margin-top: 11px;
+
+}
+
+.batu-dua {
+    position: absolute;
+    height: 92px;
+    width: 128px;
+    left: 45px;
+    top: 55px;
+    border-radius: 0px;
+}
+
+.wrapper-kertas-dua {
+    position: relative;
+    width: 223px;
+    height: 204px;
+    background: #C4C4C4;
+    border-radius: 30px;
+    margin-left: 20px;
+    margin-top: 81px;
+}
+
+.kertas-dua {
+    position: absolute;
+    height: 150px;
+    width: 115px;
+    left: 57px;
+    top: 23px;
+    border-radius: 0px;
+}
+
+.wrapper-gunting-dua {
+    position: relative;
+    width: 223px;
+    height: 204px;
+    background: #C4C4C4;
+    border-radius: 30px;
+    margin-left: 355px;
+    margin-top: 81px;
+}
+
+.gunting-dua {
+    position: absolute;
+    height: 160px;
+    width: 134px;
+    top: 20px;
+    left: 43px;
+    border-radius: 0px;
+    
 }
 
 .versus {
@@ -289,30 +344,6 @@ body {
     line-height: 49px;
     letter-spacing: 0.1em;
     text-align: center;
-}
-
-.batu-dua {
-    height: 92px;
-    width: 128px;
-    left: 382px;
-    top: 267px;
-    border-radius: 0px;
-}
-
-.kertas-dua {
-    height: 150px;
-    width: 115px;
-    left: 388px;
-    top: 440px;
-    border-radius: 0px;
-}
-
-.gunting-dua {
-    height: 160px;
-    width: 134px;
-    left: 369px;
-    top: 671px;
-    border-radius: 0px;
 }
 
 .refresh {

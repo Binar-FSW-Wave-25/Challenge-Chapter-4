@@ -65,11 +65,30 @@
         const computerRockBtn = document.querySelector('.wrapper-batu-dua');
 		const computerPaperBtn = document.querySelector('.wrapper-kertas-dua');
 		const computerScissorBtn = document.querySelector('.wrapper-gunting-dua');
+        const computerOptions = ['batu','kertas','gunting'] 
 
         playerRockBtn.addEventListener('click', function() {
             playerRockBtn.classList.add('bg-grey');
             playerPaperBtn.classList.remove('bg-grey');
             playerScissorBtn.classList.remove('bg-grey');
+
+            const choiceNumber = Math.floor(Math.random()*3);
+            const computerChoice = computerOptions[choiceNumber];
+            if (computerChoice === 'batu') {
+                computerRockBtn.classList.add('bg-grey');
+                computerPaperBtn.classList.remove('bg-grey');
+                computerScissorBtn.classList.remove('bg-grey');
+            } else if (computerChoice === 'kertas') {
+                computerPaperBtn.classList.add('bg-grey');
+                computerRockBtn.classList.remove('bg-grey');
+                computerScissorBtn.classList.remove('bg-grey');
+            } else if (computerChoice === 'gunting') {
+                computerScissorBtn.classList.add('bg-grey'); 
+                computerPaperBtn.classList.remove('bg-grey');
+                computerRockBtn.classList.remove('bg-grey');
+            }
+                
+            
         });
         
         playerPaperBtn.addEventListener('click', function() {

@@ -66,7 +66,7 @@ body {
 
 .computer {
     
-    margin-left: 270px;
+    margin-left: 287px;
 }
 
 .batu {
@@ -78,7 +78,7 @@ body {
 }
 
 .versus {
-    margin-left: 40px;
+    margin-left: 26px;
     margin-top: 80px;
 }
 
@@ -178,7 +178,7 @@ body {
     width: 223px;
     height: 204px;
     border-radius: 30px;
-    margin-left: 355px;
+    margin-left: 370px;
     margin-top: 11px;
 
 }
@@ -197,7 +197,7 @@ body {
     width: 223px;
     height: 204px;
     border-radius: 30px;
-    margin-left: 20px;
+    margin-left: 45px;
     margin-top: 81px;
 }
 
@@ -215,7 +215,7 @@ body {
     width: 223px;
     height: 204px;
     border-radius: 30px;
-    margin-left: 355px;
+    margin-left: 370px;
     margin-top: 81px;
 }
 
@@ -253,8 +253,8 @@ body {
 .player-one {
     height: 186px;
     width: 277px;
-    margin-left: 105px;
-    margin-top: 60px;
+    margin-left: 45px;
+    margin-top: 74px;
     background: #4C9654;
     border-radius: 10px;
     color: #FFFFFF;
@@ -273,8 +273,8 @@ body {
 .com-menang {
     height: 186px;
     width: 277px;
-    margin-left: 105px;
-    margin-top: 60px;
+    margin-left: 45px;
+    margin-top: 74px;
     background: #4C9654;
     border-radius: 10px;
     color: #FFFFFF;
@@ -294,8 +294,8 @@ body {
 .seri {
     height: 186px;
     width: 277px;
-    margin-left: 105px;
-    margin-top: 60px;
+    margin-left: 45px;
+    margin-top: 74px;
     background: #035B0C;
     border-radius: 10px;
     color: #FFFFFF;

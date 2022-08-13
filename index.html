@@ -10,15 +10,14 @@
 </head>
 <body>
 
-    <!--bagian atas-->
+    <!--Bagian atas-->
     <div class="container-satu">
         <img src="assets/_.png" class="satu">
         <img src="assets/logo 1.png" class="dua">
         <span class="tiga"><b>ROCK PAPER SCISSORS</b></span>
     </div>
-    <!--bagian atas selesai-->
-
-    <!--kertas, gunting, batu-->
+    <!--Bagian atas selesai-->
+    <!--Batu, kertas, gunting-->
     <div class="container">
         <div class="team">
             <span class="p1"><b>PLAYER 1</b></span>
@@ -52,58 +51,155 @@
                 <img class="gunting-dua" src="assets/gunting 2.png">
             </div>
         </div>
-        <div>
-            <img class="refresh" src="assets/refresh 2.png">
-        </div>
+        <img class="refresh" src="assets/refresh 2.png">
     </div>
-    <!--kertas, gunting, batu selesai-->
+    <!--Batu, kertas, gunting selesai-->
 
     <script>
-        const playerRockBtn = document.querySelector('.wrapper-batu-satu');
-		const playerPaperBtn = document.querySelector('.wrapper-kertas-satu');
-		const playerScissorBtn = document.querySelector('.wrapper-gunting-satu');
-        const computerRockBtn = document.querySelector('.wrapper-batu-dua');
-		const computerPaperBtn = document.querySelector('.wrapper-kertas-dua');
-		const computerScissorBtn = document.querySelector('.wrapper-gunting-dua');
+        const playerBatuBtn = document.querySelector('.wrapper-batu-satu');
+		const playerKertasBtn = document.querySelector('.wrapper-kertas-satu');
+		const playerGuntingBtn = document.querySelector('.wrapper-gunting-satu');
+        const computerBatuBtn = document.querySelector('.wrapper-batu-dua');
+		const computerKertasBtn = document.querySelector('.wrapper-kertas-dua');
+		const computerGuntingBtn = document.querySelector('.wrapper-gunting-dua');
+        const refreshBtn = document.querySelector('.refresh');
         const computerOptions = ['batu','kertas','gunting'] 
 
-        playerRockBtn.addEventListener('click', function() {
-            playerRockBtn.classList.add('bg-grey');
-            playerPaperBtn.classList.remove('bg-grey');
-            playerScissorBtn.classList.remove('bg-grey');
+    /* Batu */
+        playerBatuBtn.addEventListener('click', function() {
+            playerBatuBtn.classList.add('bg-grey');
+            playerKertasBtn.classList.remove('bg-grey');
+            playerGuntingBtn.classList.remove('bg-grey');
 
             const choiceNumber = Math.floor(Math.random()*3);
             const computerChoice = computerOptions[choiceNumber];
+    
             if (computerChoice === 'batu') {
-                computerRockBtn.classList.add('bg-grey');
-                computerPaperBtn.classList.remove('bg-grey');
-                computerScissorBtn.classList.remove('bg-grey');
+                computerBatuBtn.classList.add('bg-grey');
+                computerKertasBtn.classList.remove('bg-grey');
+                computerGuntingBtn.classList.remove('bg-grey');
+
+                document.querySelector('.seri').classList.remove('hide');
+                document.querySelector('.player-one').classList.add('hide');
+                document.querySelector('.com-menang').classList.add('hide');
+                document.querySelector('.versus').classList.add('hide');
+
             } else if (computerChoice === 'kertas') {
-                computerPaperBtn.classList.add('bg-grey');
-                computerRockBtn.classList.remove('bg-grey');
-                computerScissorBtn.classList.remove('bg-grey');
+                computerKertasBtn.classList.add('bg-grey');
+                computerBatuBtn.classList.remove('bg-grey');
+                computerGuntingBtn.classList.remove('bg-grey');
+
+                document.querySelector('.com-menang').classList.remove('hide');
+                document.querySelector('.seri').classList.add('hide');
+                document.querySelector('.player-one').classList.add('hide');
+                document.querySelector('.versus').classList.add('hide');
             } else if (computerChoice === 'gunting') {
-                computerScissorBtn.classList.add('bg-grey'); 
-                computerPaperBtn.classList.remove('bg-grey');
-                computerRockBtn.classList.remove('bg-grey');
+                computerGuntingBtn.classList.add('bg-grey'); 
+                computerKertasBtn.classList.remove('bg-grey');
+                computerBatuBtn.classList.remove('bg-grey');
+
+                document.querySelector('.player-one').classList.remove('hide');
+                document.querySelector('.com-menang').classList.add('hide');
+                document.querySelector('.seri').classList.add('hide');
+                document.querySelector('.versus').classList.add('hide');
+            } 
+        });
+    /* Batu Selesai */
+    /* Kertas */   
+        playerKertasBtn.addEventListener('click', function() {
+            playerKertasBtn.classList.add('bg-grey');
+            playerBatuBtn.classList.remove('bg-grey');
+            playerGuntingBtn.classList.remove('bg-grey');
+
+            const choiceNumber = Math.floor(Math.random()*3);
+            const computerChoice = computerOptions[choiceNumber];
+
+            if (computerChoice === 'batu') {
+                computerBatuBtn.classList.add('bg-grey');
+                computerKertasBtn.classList.remove('bg-grey');
+                computerGuntingBtn.classList.remove('bg-grey');
+
+                document.querySelector('.seri').classList.add('hide');
+                document.querySelector('.player-one').classList.remove('hide');
+                document.querySelector('.com-menang').classList.add('hide');
+                document.querySelector('.versus').classList.add('hide');
+
+            } else if (computerChoice === 'kertas') {
+                computerKertasBtn.classList.add('bg-grey');
+                computerBatuBtn.classList.remove('bg-grey');
+                computerGuntingBtn.classList.remove('bg-grey');
+
+                document.querySelector('.com-menang').classList.add('hide');
+                document.querySelector('.seri').classList.remove('hide');
+                document.querySelector('.player-one').classList.add('hide');
+                document.querySelector('.versus').classList.add('hide');
+            } else if (computerChoice === 'gunting') {
+                computerGuntingBtn.classList.add('bg-grey'); 
+                computerKertasBtn.classList.remove('bg-grey');
+                computerBatuBtn.classList.remove('bg-grey');
+
+                document.querySelector('.player-one').classList.add('hide');
+                document.querySelector('.com-menang').classList.remove('hide');
+                document.querySelector('.seri').classList.add('hide');
+                document.querySelector('.versus').classList.add('hide');
             }
-                
-            
         });
-        
-        playerPaperBtn.addEventListener('click', function() {
-            playerPaperBtn.classList.add('bg-grey');
-            playerRockBtn.classList.remove('bg-grey');
-            playerScissorBtn.classList.remove('bg-grey');
+    /* Kertas Selesai */
+    /* Gunting */    
+        playerGuntingBtn.addEventListener('click', function() {
+            playerGuntingBtn.classList.add('bg-grey');
+            playerKertasBtn.classList.remove('bg-grey');
+            playerBatuBtn.classList.remove('bg-grey');
+
+            const choiceNumber = Math.floor(Math.random()*3);
+            const computerChoice = computerOptions[choiceNumber];
+
+            if (computerChoice === 'batu') {
+                computerBatuBtn.classList.add('bg-grey');
+                computerKertasBtn.classList.remove('bg-grey');
+                computerGuntingBtn.classList.remove('bg-grey');
+
+                document.querySelector('.seri').classList.add('hide');
+                document.querySelector('.player-one').classList.add('hide');
+                document.querySelector('.com-menang').classList.remove('hide');
+                document.querySelector('.versus').classList.add('hide');
+
+            } else if (computerChoice === 'kertas') {
+                computerKertasBtn.classList.add('bg-grey');
+                computerBatuBtn.classList.remove('bg-grey');
+                computerGuntingBtn.classList.remove('bg-grey');
+
+                document.querySelector('.com-menang').classList.add('hide');
+                document.querySelector('.seri').classList.add('hide');
+                document.querySelector('.player-one').classList.remove('hide');
+                document.querySelector('.versus').classList.add('hide');
+            } else if (computerChoice === 'gunting') {
+                computerGuntingBtn.classList.add('bg-grey'); 
+                computerKertasBtn.classList.remove('bg-grey');
+                computerBatuBtn.classList.remove('bg-grey');
+
+                document.querySelector('.player-one').classList.add('hide');
+                document.querySelector('.com-menang').classList.add('hide');
+                document.querySelector('.seri').classList.remove('hide');
+                document.querySelector('.versus').classList.add('hide');
+            }
         });
+    /* Gunting Selesai */
+    /* Refresh */
+        refreshBtn.addEventListener('click', function() {
+            playerBatuBtn.classList.remove('bg-grey');
+            playerKertasBtn.classList.remove('bg-grey');
+            playerGuntingBtn.classList.remove('bg-grey');
+            computerKertasBtn.classList.remove('bg-grey');
+            computerBatuBtn.classList.remove('bg-grey');
+            computerGuntingBtn.classList.remove('bg-grey');
 
-        playerScissorBtn.addEventListener('click', function() {
-            playerScissorBtn.classList.add('bg-grey');
-            playerPaperBtn.classList.remove('bg-grey');
-            playerRockBtn.classList.remove('bg-grey');
-        });
-
-
+            document.querySelector('.seri').classList.add('hide');
+            document.querySelector('.player-one').classList.add('hide');
+            document.querySelector('.com-menang').classList.add('hide');
+            document.querySelector('.versus').classList.remove('hide');
+        })
+    /* Refresh Selesai */
     </script>
 
 </body>

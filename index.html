@@ -59,12 +59,32 @@
     <!--kertas, gunting, batu selesai-->
 
     <script>
-        const playerRockBtn = document.querySelector('.batu-satu');
-		const playerPaperBtn = document.querySelector('.kertas-satu');
-		const playerScissorBtn = document.querySelector('.gunting-satu');
-        const computerRockBtn = document.querySelector('.batu-dua');
-		const computerPaperBtn = document.querySelector('.kertas-dua');
-		const computerScissorBtn = document.querySelector('.gunting-dua');
+        const playerRockBtn = document.querySelector('.wrapper-batu-satu');
+		const playerPaperBtn = document.querySelector('.wrapper-kertas-satu');
+		const playerScissorBtn = document.querySelector('.wrapper-gunting-satu');
+        const computerRockBtn = document.querySelector('.wrapper-batu-dua');
+		const computerPaperBtn = document.querySelector('.wrapper-kertas-dua');
+		const computerScissorBtn = document.querySelector('.wrapper-gunting-dua');
+
+        playerRockBtn.addEventListener('click', function() {
+            playerRockBtn.classList.add('bg-grey');
+            playerPaperBtn.classList.remove('bg-grey');
+            playerScissorBtn.classList.remove('bg-grey');
+        });
+        
+        playerPaperBtn.addEventListener('click', function() {
+            playerPaperBtn.classList.add('bg-grey');
+            playerRockBtn.classList.remove('bg-grey');
+            playerScissorBtn.classList.remove('bg-grey');
+        });
+
+        playerScissorBtn.addEventListener('click', function() {
+            playerScissorBtn.classList.add('bg-grey');
+            playerPaperBtn.classList.remove('bg-grey');
+            playerRockBtn.classList.remove('bg-grey');
+        });
+
+
     </script>
 
 </body>

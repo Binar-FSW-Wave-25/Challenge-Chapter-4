@@ -100,20 +100,6 @@ body {
     align-items: center;
 }
 
-/* Hover */
-/* .batu-satu:hover {
-    background-color: #C4C4C4;
-}
-
-.kertas-satu:hover {
-    background-color: #C4C4C4;
-}
-
-.gunting-satu:hover {
-    background-color: #C4C4C4;
-} */
-/* Hover Selesai */
-
 .p1 {
     height: 94px;
     width: 299px;
@@ -136,7 +122,6 @@ body {
     position: relative;
     width: 223px;
     height: 204px;
-    background: #C4C4C4;
     border-radius: 30px;
     margin-left: 330px;
     margin-top: 11px;
@@ -156,7 +141,6 @@ body {
     position: relative;
     width: 223px;
     height: 204px;
-    background: #C4C4C4;
     border-radius: 30px;
     margin-left: 330px;
     margin-top: 81px;
@@ -175,7 +159,6 @@ body {
     position: relative;
     width: 223px;
     height: 204px;
-    background: #C4C4C4;
     border-radius: 30px;
     margin-left: 330px;
     margin-top: 81px;
@@ -194,7 +177,6 @@ body {
     position: relative;
     width: 223px;
     height: 204px;
-    background: #C4C4C4;
     border-radius: 30px;
     margin-left: 355px;
     margin-top: 11px;
@@ -214,7 +196,6 @@ body {
     position: relative;
     width: 223px;
     height: 204px;
-    background: #C4C4C4;
     border-radius: 30px;
     margin-left: 20px;
     margin-top: 81px;
@@ -233,7 +214,6 @@ body {
     position: relative;
     width: 223px;
     height: 204px;
-    background: #C4C4C4;
     border-radius: 30px;
     margin-left: 355px;
     margin-top: 81px;
@@ -246,7 +226,10 @@ body {
     top: 20px;
     left: 43px;
     border-radius: 0px;
-    
+}
+
+.bg-grey {
+    background: #C4C4C4;
 }
 
 .versus {

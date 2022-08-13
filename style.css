@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: #9C835F;
+}
+
+header {
+    background: white;
+    background-color: #9C835F;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+
+    
+}
+
+header > h1 {
+    color : #f9b23d;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    margin-left: 24px;
+}
+
+
+.result-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 271.11px;
+    height: 166.63px;
+}
+
+.result-text {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 144px;
+    color: red;
+    font-weight: 700;
+    padding: 30px 25px;
+    margin: 0px 20px;
+
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    margin-left: 334px;
+    
+}
+
+.choices-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.choices-computer {
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center;
+}
+
+.users {
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+
+}
+
+.button-choice {
+    border-radius: 30px;
+    text-align: center;
+    align-items: center;
+}
+
+.button-choice:hover {
+    cursor: pointer;
+    background-color: #C4C4C4;
+    opacity: 1;
+    transition: all 1s;
+}
+/* 
+.button-choice:focus {
+    display: inline-block;
+    opacity: 1;
+    transition: 1s;
+    border: none;
+    align-items: center !important;
+    justify-content: center !important;
+    border-color: #C4C4C4;
+    border: none;
+
+} */
+
+.reset-button {
+    justify-content: center !important;
+    align-items: center !important;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.selected{
+    background-color: #C4C4C4;
+}
+
+
+

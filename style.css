@@ -185,6 +185,15 @@ body {
     border-radius: 0px;
 }
 
+.background {
+    width: 223px;
+    height: 204px;
+    left: 334px;
+    top: 671px;
+    background: #C4C4C4;
+    border-radius: 30px;
+}
+
 .versus {
     height: 186px;
     width: 296px;

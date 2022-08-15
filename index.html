@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janken: Traditional Games</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="/assets/icon.ico">
+</head>
+<body>
+    <nav class="navbar my-2">
+        <div class="container-fluid justify-content-start mx-4">
+            <a href="index.html">&lt</a>
+            <img class="mx-4" src="/assets/logo 1.png" alt="">
+            <h2>ROCK PAPER SCISSORS</h2>
+        </div>
+    </nav>
+    <div class="container-md text-center mt-3">
+        <div class="row justify-content-center ">
+            <div class="col-3">
+                <h2 class="mb-4" >PLAYER 1</h2>
+                <button type="button" class="btn choice" value="batu"><img src="/assets/batu.png"></button><br>
+                <button type="button" class="btn choice" value="kertas"><img src="/assets/kertas.png"></button><br>
+                <button type="button" class="btn choice" value="gunting"><img src="/assets/gunting.png"></button>
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn result"><h2 id="result" class="mt-5">VS</h2></button><br>
+                <input class="refresh" type="image" onclick="window.location.reload()" src="/assets/refresh.png" alt="">
+            </div>
+            <div class="col-3">
+                <h2 class="mb-4">COM</h2>
+                <button type="button" class="btn comChoice" value="batu" disabled=""><img class="imgChoice" src="/assets/batu.png" alt=""></button><br>
+                <button type="button" class="btn comChoice" value="kertas" disabled=""><img class="imgChoice" src="/assets/kertas.png" alt=""></button><br>
+                <button type="button" class="btn comChoice" value="gunting" disabled=""><img class="imgChoice" src="/assets/gunting.png" alt=""></button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script>
+        let playerChoice = document.getElementsByClassName("choice");
+        let comChoice = document.getElementsByClassName("comChoice");
+        let imgChoice = document.getElementsByClassName("imgChoice");
+        let result = document.getElementById("result");
+
+        class dataJanken {
+            constructor(com) {
+                this._player = "";
+                this.com = com;
+            }
+
+            set player(ply) {
+                this._player = ply;
+            }
+
+            get player() {
+                return this._player;
+            }
+
+            condition() {
+                if (this._player === "batu") {
+                    if (this.com === "batu") {
+                        result.innerText = "DRAW";
+                        result.classList.add("draw-result");
+                        comChoice[0].setAttribute("disabled", "");
+                        comChoice[0].classList.add("active");
+                        playerChoice[0].setAttribute("disabled", "");
+                        playerChoice[0].classList.add("active");
+                        playerChoice[1].setAttribute("disabled", "");
+                        playerChoice[2].setAttribute("disabled", "");
+                    } else if (this.com === "gunting") {
+                        result.innerText = "PLAYER 1 WIN";
+                        result.classList.add("result");
+                        comChoice[2].setAttribute("disabled", "");
+                        comChoice[2].classList.add("active");
+                        playerChoice[0].setAttribute("disabled", "");
+                        playerChoice[0].classList.add("active");
+                        playerChoice[1].setAttribute("disabled", "");
+                        playerChoice[2].setAttribute("disabled", "");
+                    } else if (this.com === "kertas") {
+                        result.innerText = "COM WIN";
+                        result.classList.add("result");
+                        comChoice[1].setAttribute("disabled", "");
+                        comChoice[1].classList.add("active");
+                        playerChoice[0].setAttribute("disabled", "");
+                        playerChoice[0].classList.add("active");
+                        playerChoice[1].setAttribute("disabled", "");
+                        playerChoice[2].setAttribute("disabled", "");
+                    };
+                } else if (this._player === "gunting"){
+                    if (this.com === "batu") {
+                        result.innerText = "COM WIN";
+                        result.classList.add("result");
+                        comChoice[0].setAttribute("disabled", "");
+                        comChoice[0].classList.add("active");
+                        playerChoice[0].setAttribute("disabled", "");
+                        playerChoice[1].setAttribute("disabled", "");
+                        playerChoice[2].setAttribute("disabled", "");
+                        playerChoice[2].classList.add("active");
+                    } else if (this.com === "gunting") {
+                        result.innerText = "DRAW";
+                        result.classList.add("draw-result");
+                        comChoice[2].setAttribute("disabled", "");
+                        comChoice[2].classList.add("active");
+                        playerChoice[0].setAttribute("disabled", "");
+                        playerChoice[1].setAttribute("disabled", "");
+                        playerChoice[2].setAttribute("disabled", "");
+                        playerChoice[2].classList.add("active");
+                    } else if (this.com === "kertas") {
+                        result.innerText = "PLAYER 1 WIN";
+                        result.classList.add("result");
+                        comChoice[1].setAttribute("disabled", "");
+                        comChoice[1].classList.add("active");
+                        playerChoice[0].setAttribute("disabled", "");
+                        playerChoice[1].setAttribute("disabled", "");
+                        playerChoice[2].setAttribute("disabled", "");
+                        playerChoice[2].classList.add("active");
+                    };
+                } else if (this._player === "kertas"){
+                    if (this.com === "batu") {
+                        result.innerText = "PLAYER 1 WIN";
+                        result.classList.add("result");
+                        comChoice[0].setAttribute("disabled", "");
+                        comChoice[0].classList.add("active");
+                        playerChoice[0].setAttribute("disabled", "");
+                        playerChoice[1].setAttribute("disabled", "");
+                        playerChoice[1].classList.add("active");
+                        playerChoice[2].setAttribute("disabled", "");
+                    } else if (this.com === "gunting") {
+                        result.innerText = "COM WIN";
+                        result.classList.add("result");
+                        comChoice[2].setAttribute("disabled", "");
+                        comChoice[2].classList.add("active");
+                        playerChoice[0].setAttribute("disabled", "");
+                        playerChoice[1].setAttribute("disabled", "");
+                        playerChoice[1].classList.add("active");
+                        playerChoice[2].setAttribute("disabled", "");
+                    } else if (this.com === "kertas") {
+                        result.innerText = "DRAW";
+                        result.classList.add("draw-result");
+                        comChoice[1].setAttribute("disabled", "");
+                        comChoice[1].classList.add("active");
+                        playerChoice[0].setAttribute("disabled", "");
+                        playerChoice[1].setAttribute("disabled", "");
+                        playerChoice[1].classList.add("active");
+                        playerChoice[2].setAttribute("disabled", "");
+                    };
+                };
+            };
+            
+            setValue(ply) {
+                this.player = ply;
+            }
+
+            getValue() {
+                return this.player;
+            }
+        };
+
+        class playJanken extends dataJanken {
+            constructor(player, com) {
+                super(com);
+                this.playerCostruct = player;
+            };
+            play() {
+                this.setValue(this.playerCostruct);
+                let player = this.setValue(this.playerCostruct);
+                let com = this.com;
+                console.log(player);
+                console.log(com);
+                console.log(this.condition());
+                return this.condition();
+            };
+        };
+
+        function randomChoice() {
+            let choice = [
+                "batu",
+                "kertas",
+                "gunting"
+            ]
+            let result = choice[Math.floor(Math.random()*choice.length)];
+            return result;
+        };
+
+        for(let i = 0; i < playerChoice.length; i++) {
+            playerChoice[i].addEventListener("click", function(){
+                let value = playerChoice[i].value;
+                let play = new playJanken (value, randomChoice()).play();
+            });
+        }
+        </script>
+</body>
+</html>

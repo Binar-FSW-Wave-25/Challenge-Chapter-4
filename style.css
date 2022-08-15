@@ -1,0 +1,90 @@
+body {
+    background-image: url(assets/background.jpg);
+    width: 1440px;
+    height: 1024px;
+}
+.title {
+
+    position: absolute;
+    width: 410px;
+    height: 62px;
+    left: 174px;
+    top: 40px;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 29px;
+    line-height: 49px;
+    text-align: center;
+
+    color: #F9B23D;
+}
+
+.logo {
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    left: 119px;
+    top: 27px;
+    
+}
+
+.player1 {
+
+    color: black;
+    position: absolute;
+    width: 299px;
+    height: 94px;
+    left: 296px;
+    top: 162px;
+    
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 49px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    
+    
+
+}
+
+.com {
+    color: black;
+    position: absolute;
+    width: 299px;
+    height: 94px;
+    left: 865px;
+    top: 162px;
+
+    color: black;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 49px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+#batu:hover {
+    background-color: #C4C4C4;
+    border-radius: 30px;
+    transition: .5s ease-in-out;
+}
+
+#kertas:hover {
+    background-color: #C4C4C4;
+    border-radius: 30px;
+    transition: .5s ease-in-out;
+}
+
+#gunting:hover {
+    background-color: #C4C4C4;
+    border-radius: 30px;
+    transition: .5s ease-in-out;
+}

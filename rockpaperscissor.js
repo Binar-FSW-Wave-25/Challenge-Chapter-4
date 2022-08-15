@@ -10,7 +10,7 @@ const   computerRock = document.getElementById("btn-rock-computer"),
         computerScissor = document.getElementById("btn-scissor-computer");
 
 /* VS */
-const vs = document.querySelector(".vs");
+const vs = document.querySelector("#win");
 
 /* Refresh */
 const refresh = document.querySelector(".refresh-icon");
@@ -41,7 +41,7 @@ playerScissor.addEventListener("click", () => {
 class startGame{
     constructor(){
         this.player = "PLAYER 1";
-        this.computer = "COM";
+        this.computer = "COMPUTER";
         this.win = "";
         this.playerOption;
         this.computerOption;
@@ -69,25 +69,24 @@ class startGame{
     /* computer random pickup */
     computerRandom(){
         const computerChoice = [computerRock, computerPaper, computerScissor];
-        const random = Math.floor(Math.random() * 3);
-        const computerResult = computerChoice[random];
+        const computerResult = computerChoice[Math.floor(Math.random() * 3)];
         computerResult.classList.add("pick");
         return computerResult;
     }
 
     /* Win Algorithm */
     winProcess(){
-        if(this.computerOption == playerRock && this.playerOption == playerScissor){
+        if(this.computerOption == computerRock && this.playerOption == playerScissor){
             this.win = this.player;
-        } else if(this.computerOption == playerRock && this.playerOption == playerPaper){
+        } else if(this.computerOption == computerRock && this.playerOption == playerPaper){
             this.win = this.computer;
-        } else if(this.computerOption == playerPaper && this.playerOption == playerScissor){
+        } else if(this.computerOption == computerPaper && this.playerOption == playerScissor){
             this.win = this.player;
-        } else if(this.computerOption == playerPaper && this.playerOption == playerRock){
+        } else if(this.computerOption == computerPaper && this.playerOption == playerRock){
             this.win = this.computer;
-        } else if(this.computerOption == playerScissor && this.playerOption == playerPaper){
+        } else if(this.computerOption == computerScissor && this.playerOption == playerPaper){
             this.win = this.player;
-        } else if(this.computerOption == playerScissor && this.playerOption == playerRock){
+        } else if(this.computerOption == computerScissor && this.playerOption == playerRock){
             this.win = this.computer
         } else {
             this.win = "DRAW";
@@ -99,12 +98,13 @@ class startGame{
     changeVS(){
         if(this.win == "DRAW"){
             vs.classList.add("win");
-            vs.innerHTML = "DRAW";
+            vs.innerText = "DRAW";
             return;
         }else{
             vs.classList.remove("vs");
             vs.classList.add("win");
-            vs.innerHTML = '${this.win} \n WIN';
+            vs.innerText = '${this.win} \n WIN';
+            return;
         }
     }
 }

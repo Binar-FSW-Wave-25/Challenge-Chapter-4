@@ -22,7 +22,7 @@
         <div class="main">
             <div class= "main-content">
             <div class="row align-items-center justify-content-center">
-                <div class="col flex-column justify-content-center col-sm-3 col-md-3 col-lg-3" id="player1" >
+                <div class="col col-sm-2 col-lg-2" id="player1" >
                     <p class="text-center">PLAYER 1</p>
                         <div>
                             <button type="button" class="btn" id="btn-rock-player">
@@ -41,31 +41,31 @@
                         </div>
                 </div>
                 <div class="col col-sm-5 col-md-5 col-lg-3">
-                    <div class="vs">VS</div>
+                    <div  class="vs" id = "win">VS</div>
                 </div>
-                <div class="col flex-column justify-content-center col-sm-3 col-md-3 col-lg-3" id="computer">
+                <div class="col col-sm-5 col-lg-2" id="computer">
                     <p class="text-center">COMPUTER</p>
                         <div>
-                            <button type="button" class="btn" id="btn-rock-computer">
+                            <button type="button" class="btn" id="btn-rock-computer" disabled>
                             <img src="assets (1)/assets/batu.png" alt="rock" class="rock"/>
                             </button>
                         </div>
                         <div>
-                            <button type="button" class="btn" id="btn-paper-computer">
+                            <button type="button" class="btn" id="btn-paper-computer" disabled>
                             <img src="assets (1)/assets/kertas.png" alt="paper" class="paper"/>
                             </button>
                         </div>
                         <div>
-                            <button type="button" class="btn" id="btn-scissor-computer">
+                            <button type="button" class="btn" id="btn-scissor-computer" disabled>
                             <img src="assets (1)/assets/gunting.png" alt="scissor" class="scissor"/>
                             </button>
                         </div>
                 </div>
             </div>
-            <div class="refresh-icon">
-            <div class="row justify-content-center">
+            <div class="row justify-content-center align-items-center">
+                <button type="button" class="refresh-icon">
                 <img src="assets (1)/assets/refresh.png" alt="refresh" class="refresh"/>
-            </div>
+                </button> 
             </div>
         </div>
     </div>

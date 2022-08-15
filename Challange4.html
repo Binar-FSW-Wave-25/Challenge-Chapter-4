@@ -18,7 +18,6 @@
         height: 87px;
         left: 37px;
         top: 12px;
-        
         font-family: 'Open Sans';
         font-style: normal;
         font-weight: 700;
@@ -33,20 +32,21 @@
     <div class="container">
         <div class="row">
             <div class="col">
+                <!-- gambar player -->
                 <h2 class="player1">PLAYER 1</h2>
-                <div id="batu" role="button" class="row"><img src="assets/batu 1.png" style="position: absolute;
+                <div id="playerBatu" role="button" class="row"><img src="assets/batu 1.png" style="position: absolute;
                     width: 128px;
                     height: 92px;
                     left: 382px;
                     top: 267px;">
                     </div>
-                <div id="kertas" role="button" class="row"><img src="assets/kertas 1.png" style="position: absolute;
+                <div id="playerKertas" role="button" class="row"><img src="assets/kertas 1.png" style="position: absolute;
                     width: 115px;
                     height: 150px;
                     left: 388px;
                     top: 440px;">
                     </div>
-                <div id="gunting" role="button" class="row"><img src="assets/gunting 1.png" style="position: absolute;
+                <div id="playerGunting" role="button" class="row"><img src="assets/gunting 1.png" style="position: absolute;
                     width: 134px;
                     height: 160px;
                     left: 369px;
@@ -54,26 +54,37 @@
                     </div>
                 
             </div>
-            <div class="col"></div>
+
+            <!-- vs -->
+            <div class="col" class="result">
+                <h3 class="hasilSuit">VS</h3>
+            </div>
+            
+            <!-- gambar komputer -->
             <div class="col">
                 <h2 class="com">COM</h2>
-                <div class="row"><img src="assets/batu 1.png" style="position: absolute;
+                <div class="row" id="comBatu" ><img src="assets/batu 1.png" style="position: absolute;
                     width: 128px;
                     height: 92px;
                     left: 951px;
                     top: 267px;">
                     </div>
-                <div class="row"><img src="assets/kertas 1.png" style="position: absolute;
+                <div class="row" id="comKertas" ><img src="assets/kertas 1.png" style="position: absolute;
                     width: 115px;
                     height: 150px;
                     left: 970px;
                     top: 440px;">
                     </div>
-                <div class="row"><img src="assets/gunting 1.png" style="position: absolute;
+                <div class="row" id="comGunting" ><img src="assets/gunting 1.png" style="position: absolute;
                     width: 134px;
                     height: 160px;
                     left: 951px;
                     top: 671px;">
+                    </div>
+                    <div class="row justify-content-center align-items-center">
+                        <button type="button" class="refresh-icon">
+                        <img src="assets/refresh 2.png" alt="refresh" class="refresh"/>
+                        </button> 
                     </div>
             </div>
         </div>
@@ -82,46 +93,43 @@
 
     </div>
     <script>
-        var batu = document.getElementById("batu")
-        var gunting = document.getElementById("gunting")
-        var kertas = document.getElementById("kertas")
+        const playerBatu = document.getElementById("playerBatu")
+        const playerGunting = document.getElementById("playerGunting")
+        const playerKertas = document.getElementById("playerKertas")
 
-        // console.log(batu);
-        // console.log(gunting);
-        // console.log(kertas);
-
-        const element1 = document.getElementById("batu");
+        // jika player memencet batu
+        const element1 = document.getElementById("playerBatu");
         element1.addEventListener("click", myFunction1);
         function myFunction1() {
-            let player = "batu" 
-            console.log(player, '->Pilihan Player')
-
-            let choice = ["batu", "gunting", "kertas"]
+            let player = "playerBatu" 
+            console.log(player)
+            let choice = ["comBatu", "comGunting", "comKertas"]
             let bot = choice[Math.floor(Math.random() * choice.length)]
-            console.log(bot, '->Pilihan Bot')
-
-            if (bot === "batu") {
+            console.log(bot)
+            if (bot === "comBatu") {
                 console.log("DRAW")
-            } else if (bot === "kertas"){
+            } else if (bot === "comKertas"){
                 console.log("YOU LOSE!")
             }else{
                 console.log("YOU WIN!")
             }
+        
         }
 
-        const element2 = document.getElementById("kertas");
+        // jika player memencet kertas
+        const element2 = document.getElementById("playerKertas");
         element2.addEventListener("click", myFunction2);
         function myFunction2() {
-            let player = "kertas"
-            console.log(player, '->Pilihan Player');
+            let player = "playerKertas"
+            console.log(player);
 
-            let choice = ["batu", "gunting", "kertas"]
+            let choice = ["comBatu", "comGunting", "comKertas"]
             let bot = choice[Math.floor(Math.random() * choice.length)]
-            console.log(bot, '->Pilihan Bot');
+            console.log(bot);
 
-            if(bot === "batu") {
+            if(bot === "comBatu") {
                 console.log("YOU WIN!");        
-            }else if(bot === "kertas") {
+            }else if(bot === "comKertas") {
                 console.log("DRAW");
             }else {
                 console.log("YOU LOSE!");
@@ -129,27 +137,27 @@
             
         }
 
-        const element3 = document.getElementById("gunting");
+        // jika player memencet gunting
+        const element3 = document.getElementById("playerGunting");
         element3.addEventListener("click", myFunction3);
         function myFunction3() {
-            let player = "gunting"
-            console.log(player, '->Pilihan Player');
+            let player = "playerGunting"
+            console.log(player);
 
-            let choice = ["batu", "gunting", "kertas"]
+            let choice = ["comBatu", "comGunting", "comKertas"]
             let bot = choice[Math.floor(Math.random() * choice.length)]
-            console.log(bot, '->Pilihan Bot');
+            console.log(bot);
 
-            if(bot === "batu") {
+            if(bot === "comBatu") {
                 console.log("YOU LOSE!");        
-            }else if(bot === "kertas") {
+            }else if(bot === "comKertas") {
                 console.log("YOU WIN!");
             }else {
                 console.log("DRAW");
             }
             
         }
-
-        visibility = "hidden"
+        
 
     </script>
 </body>

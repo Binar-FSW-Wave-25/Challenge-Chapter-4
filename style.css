@@ -71,6 +71,35 @@ body {
     text-transform: uppercase;
 }
 
+.hasilSuit {
+    position: absolute;
+    width: 296px;
+    height: 186px;
+    left: 589px;
+    top: 419px;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 144px;
+    line-height: 196px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: #BD0000;
+
+}
+
+.refresh {
+    position: absolute;
+    width: 77px;
+    height: 71px;
+    left: 681px;
+    top: 843px;
+
+}
+
 #batu:hover {
     background-color: #C4C4C4;
     border-radius: 30px;

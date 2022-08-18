@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game - Thomas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="intiPage">
+        <!-- navbar -->
+        <div class="row" id="navbarGame">
+            <div class="col-1"></div>
+            <div class="col-2" id="iconAtas">
+                <img id="_" src="Bahan/_.png" alt="" width="50" height="40">
+                <img src="Bahan/logo 1.png" alt="" width="72" height="72">
+            </div>
+            <div class="col-9" id="judulNav">
+                <h1>ROCK PAPER SCISSORS</h1>
+            </div>
+        </div>
+
+        
+        <!-- masuk dalam permainan -->
+        <div class="col-12" id="page1">
+            <div class="row">
+                <div class="col-1"></div>
+                <!-- user -->
+                <div class="col-3" id="pilihanUser">
+                    <h1>player1</h1>
+                    <div class="col-12">
+                        <img class="option" id="userBatu" onclick="pickOption('batu')" src="/Bahan/batu 1.png" alt="">
+                    </div>
+                    <div class="col-12">
+                        <img class="option" id="userKertas" onclick="pickOption('kertas')" src="/Bahan/kertas 1.png" alt="">
+                    </div>
+                    <div class="col-12">
+                        <img class="option" id="userGunting" onclick="pickOption('gunting')" src="/Bahan/gunting 1.png" alt="">
+                    </div>
+                </div>
+                <!-- tampilan -->
+                <div class="col-4">
+                    <!-- <button id="tombol">mulai</button> -->
+                    <div id="tampilkan">
+                        <img id="hasil"  src="bahan/VS.png" alt="">
+                        <!-- <h1 id="teksTampil">tampilaja</h1> -->
+                    </div>
+                    <div id="refresh">
+                        <img type="submit"  onClick="refreshPage()" id="iconRefresh" src="bahan/refresh 1.png" alt="">
+                    </div>
+                </div>
+                <!-- computer -->
+                <div class="col-3" id="pilihanComputer">
+                    <h1>Com</h1>
+                    <div class="col-12">
+                        <img class="computerBot" id="comBatu" src="/Bahan/batu 1.png" alt="">
+                    </div>
+                    <div class="col-12">
+                        <img class="computerBot" id="comKertas" src="/Bahan/kertas 1.png" alt="">
+                    </div>
+                    <div class="col-12" >
+                        <img class="computerBot" id="comGunting" src="/Bahan/gunting 1.png" alt="">
+                    </div>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- membuat sistem -->
+    <script>
+        let tampilTeks = document.getElementById("teksTampil")
+        let hasilGame = document.getElementById("hasil")
+        let iniRefresh = document.getElementById("iconRefresh")
+        let pencetTombol = document.getElementById("tombol")
+        
+        // pencetTombol.addEventListener("click", function(){
+        //     randomChoise()
+        // })
+        
+
+        class Start{
+            constructor(playerOption,computer){
+               this.playerOption = playerOption;
+               this.computer = computer;
+            }
+            
+            // set setPlayerOption (option) { //untuk memanggil option user
+            //     this.playerOption = option;
+            // }
+
+            // get getPlayerOption(){
+            //     return
+            // }
+            
+            pemenang() {
+                let player = this.playerOption
+                let computer = this.computer
+                console.log(player, "=== player");
+                console.log(computer, "=== computer");
+                
+                if (player === "batu"){
+                    if(computer === "batu"){
+                        // hasilGame = document.createElement('img')
+                        // hasilGame = new Image(200,200)
+                        hasilGame.src = "bahan/draw.png" // ini mas, akar masalah git pushnya lama, maaf ya mas
+                        return "DRAW"
+                        // document.body.appendChild(hasilGame)
+                    } else if(computer === "kertas"){
+                        hasilGame.src = "bahan/com-win.png"
+                        return "LOOSER"
+                    } else if(computer === "gunting"){
+                        hasilGame.src = "bahan/player-win.png"
+                        return "WINNER"
+                    }
+
+                } else if (player === "kertas"){
+                    if(computer === "batu"){
+                        hasilGame.src = "bahan/player-win.png"
+                        return "WINNER"
+                    } else if(computer === "kertas"){
+                        hasilGame.src = "bahan/draw.png"
+                        return "DRAW"
+                    } else if(computer === "gunting"){
+                        hasilGame.src = "bahan/com-win.png"
+                        return "LOOSER"
+                    }
+
+                }else if (player === "gunting"){
+                    if(computer === "batu"){
+                        hasilGame.src = "bahan/com-win.png"
+                        return "LOOSER"
+                    } else if(computer === "kertas"){
+                        hasilGame.src = "bahan/player-win.png"
+                        return "WINNER"
+                    } else if(computer === "gunting"){
+                        hasilGame.src = "bahan/draw.png"
+                        return "DRAW"
+                    }
+                }
+                pickOption.disabled = true;
+
+            }
+
+
+            pilihan(){
+                let player = this.playerOption
+                let computer = this.computer
+                //memanggil id
+                let userBatu = document.getElementById("userBatu")
+                let userKertas = document.getElementById("userKertas")
+                let userGunting = document.getElementById("userGunting")
+                let comBatu = document.getElementById("comBatu")
+                let comKertas = document.getElementById("comKertas")
+                let comGunting = document.getElementById("comGunting")
+                
+                if(player === "batu"){// output play
+                    userBatu.src = "bahan/tekan_batu.png"
+                } else if(player === "kertas"){
+                    userKertas.src = "bahan/tekan_kertas.png"
+                }else if(player === "gunting"){
+                    userGunting.src = "bahan/tekan_gunting.png"
+                }
+                
+                if(computer === "batu"){ // output com
+                    comBatu.src = "bahan/tekan_batu.png"
+                }else if(computer === "kertas"){
+                    comKertas.src = "bahan/tekan_kertas.png"
+                }else if(computer === "gunting"){
+                    comGunting.src = "bahan/tekan_gunting.png"
+                }
+            }
+            
+            // berhenti(){
+            //     var clicked = false;
+            //     {
+            //         if(pickOption() != clicked){
+            //             clicked = true;
+            //             alert("silahkan refresh")
+            //         }
+            //     }
+            // }
+        }           
+    
+        class MulaiGame extends Start{
+            constructor(playerOption,computer) {
+                super(playerOption,computer)
+            }
+
+            dimulai() {
+                return this.pemenang()
+            }
+
+            tampilkanInput() {
+                return this.pilihan()
+            }
+
+            // tidakKlik(){
+            //     return this.berhenti()
+            // }
+        }
+            
+        function pickOption(params) { // user memilih
+            let mulai = new Start();
+            let player = (Start.playerOption = params)
+            // console.log(player, " player");
+            let mulaiPermainan = new MulaiGame(player,randomChoise())
+            let gaskan = mulaiPermainan.dimulai()
+            let menampilkanInput = mulaiPermainan.tampilkanInput()
+            // let stopAct = mulaiPermainan.tidakKlik() // mas, ini dibuat stop click, tapi kok gabisa mas?
+            console.log(gaskan, "=== hasil");
+            
+            // document.getElementsByClassName("option").onclick = "";           
+            // console.log(mulaiPermainan, "== hasil");
+            // return player
+        }
+
+        function randomChoise(params){
+            let choise = ["batu", "kertas" ,"gunting"]
+            let bot = choise[Math.floor(Math.random() * choise.length)]
+            // console.log(bot, " computer");
+            return bot
+        }
+
+        function refreshPage(){
+            window.location.reload();
+        } 
+
+       
+
+        
+
+    </script>
+
+    <!-- css mode  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+</body>
+</html>

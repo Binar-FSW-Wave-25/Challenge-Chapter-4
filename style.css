@@ -1,0 +1,85 @@
+body{
+    background-color: #9C835F;
+}
+
+.row{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    padding-left: -50px;
+    padding-right: -50px;
+    /* margin-left: -50px;
+    margin-right: -50px; */
+}
+
+#page1 {
+    padding-top: 40px;
+}
+
+/* navbar */
+#navbarGame {
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+#iconAtas{
+    padding-left: 20px;
+    text-align-last: justify;
+}
+
+#judulNav {
+    padding-top: 10px;
+    text-align: left;
+    color: #F9B23D;
+}
+
+/* masuk permainan */
+#pilihanUser h1{
+    margin-bottom: 15px;
+}
+
+#pilihanUser img{
+    width: 25%;
+    margin-top: 43px ;
+    margin-bottom: 43px;
+}
+
+#pilihanComputer h1{
+    margin-bottom: 15px;
+}
+
+#pilihanComputer img{
+    width: 25%;
+    margin-top: 43px ;
+    margin-bottom: 43px;
+}
+
+.option:hover {
+    cursor: pointer;
+    transition: cubic-bezier(0.215, 0.610, 0.355, 1) ease-in-out;
+    transform:scale(110%);
+}
+
+/* tampilkan */
+#hasil{
+    padding-top: 250px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+#refresh {
+    padding-top: 300px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#iconRefresh:hover {
+    cursor: pointer;
+    transition: cubic-bezier(0.215, 0.610, 0.355, 1) ease-in-out;
+    transform:scale(110%);
+}

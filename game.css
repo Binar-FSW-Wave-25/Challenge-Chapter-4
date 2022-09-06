@@ -1,0 +1,53 @@
+
+
+.top-side h1 {
+    color: #F9B23D;
+}
+
+.img-responsive {
+    max-width: 120px;
+    height: auto;
+}
+
+.option:hover {
+cursor: pointer;
+transition:cubic-bezier(0.215, 0.610, 0.355, 1) ease-in-out;
+background-color: rgb(249 211 186);
+border-radius: 15%;
+}
+
+.refresh:hover {
+    transition: width 1s, height 1s, transform 1s;
+    transform: rotate(180deg);
+    cursor: pointer;
+}
+
+.chosen {
+    background-color: #C4C4C4;
+    border-radius: 30px;
+    
+}
+
+
+.winBox {
+    height: 100px;
+    display: grid;
+    place-items: center;
+    background: #4C9654;
+    border-radius: 10px;
+    margin:  15px auto;
+    padding: 15px;
+    
+}
+
+.drawBox {
+    height: 100px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    margin:  15px auto;
+    padding: 15px;
+    background: #035B0C;
+    border-radius: 10px;
+    
+}
